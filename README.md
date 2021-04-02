@@ -1,4 +1,4 @@
-# AngularCrudOperations
+# Twitter API - get user tweets by username
 
 ## Prerequisite
 
