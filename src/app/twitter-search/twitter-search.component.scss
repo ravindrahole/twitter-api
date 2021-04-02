@@ -1,0 +1,51 @@
+.fa-twitter{
+    color: #1b95e0
+}
+
+.search-btn {
+    border: 1px solid #ced4da;
+    background-color: #e9ecef !important;
+    color: #1b95e0 !important;
+}
+
+.card {
+    min-width: 300px;
+    .card-header {
+        font-size: 13px;
+        .retweet{
+            padding: 2px 10px;
+            border: 1px;
+            background-color: #1b95e0;
+            border-radius: 12px;
+            color: white;
+            font-weight: 500;
+        }
+    }
+    .card-body{
+        height: 140px;
+        overflow-y: auto;
+    }
+    .card-footer{
+        font-size: 13px;
+    }
+}
+
+.fa-clock-o{
+    color: #1b95e0;
+    font-size: 16px;
+}
+
+.spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: #000;
+    z-index: 999999;
+
+    .spinner-border {
+        color: #1b95e0;
+        height: 80px;
+    width: 80px;
+    }
+}
