@@ -3,6 +3,7 @@
 ## Prerequisite
 
 Node 10+ version
+
 Angular latest version
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
