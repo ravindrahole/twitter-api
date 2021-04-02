@@ -44,7 +44,7 @@ export class TwitterSearchComponent {
           this.showSpinner = false
         },
         (error: any) => {
-          console.log('error', error);
+          // console.log('error', error);
           this.showSpinner = false
           this.apiError = true;
         })
