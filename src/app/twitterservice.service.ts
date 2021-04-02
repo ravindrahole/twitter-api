@@ -16,7 +16,7 @@ export class TwitterserviceService {
     return this.http.get("assets/usertweets.json").pipe(map(data => data));
   }
 
-  getTimeline(userName: any) {
+  getTimeline(userName: any):any {
     const auth_token = 'AAAAAAAAAAAAAAAAAAAAAJcVOAEAAAAAQ1gZgYqpMTY1E5P8%2Bp%2FISUA5FqM%3DSA1cSxhpAarsVcqkZf97BRWoNULh8s0WYp2KGunUuvUh9jgOs0';
     var reqHeader = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -30,19 +30,19 @@ export class TwitterserviceService {
       );
   }
 
-  getUsers(userName: any) {
-    const auth_token = 'AAAAAAAAAAAAAAAAAAAAAJcVOAEAAAAAQ1gZgYqpMTY1E5P8%2Bp%2FISUA5FqM%3DSA1cSxhpAarsVcqkZf97BRWoNULh8s0WYp2KGunUuvUh9jgOs0';
-    var reqHeader = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + auth_token
-    });
-    return this.http.get<any[]>(`/api/1.1/users/search.json?q=soccer`,
-      { headers: reqHeader })
-      .pipe(
-        map(data => data),
-        catchError(this.handleError)
-      );
-  }
+  // getUsers(userName: any) {
+  //   const auth_token = 'AAAAAAAAAAAAAAAAAAAAAJcVOAEAAAAAQ1gZgYqpMTY1E5P8%2Bp%2FISUA5FqM%3DSA1cSxhpAarsVcqkZf97BRWoNULh8s0WYp2KGunUuvUh9jgOs0';
+  //   var reqHeader = new HttpHeaders({
+  //     'Content-Type': 'application/json',
+  //     'Authorization': 'Bearer ' + auth_token
+  //   });
+  //   return this.http.get<any[]>(`/api/1.1/users/search.json?q=soccer`,
+  //     { headers: reqHeader })
+  //     .pipe(
+  //       map(data => data),
+  //       catchError(this.handleError)
+  //     );
+  // }
 
 
 
@@ -56,7 +56,7 @@ export class TwitterserviceService {
     //     map(data => data),
     //     catchError(this.handleError)
     //   );
-    const auth_token = 'AAAAAAAAAAAAAAAAAAAAAJcVOAEAAAAAXj8RIA%2FbGZh8P5i69L8X8Mc7SCU%3DzCYbFFiJVfRehFE2mIIM23URvZKQ5SRpwlNKuPsDXPBm8JqsTJ';
+    // const auth_token = 'AAAAAAAAAAAAAAAAAAAAAJcVOAEAAAAAXj8RIA%2FbGZh8P5i69L8X8Mc7SCU%3DzCYbFFiJVfRehFE2mIIM23URvZKQ5SRpwlNKuPsDXPBm8JqsTJ';
 
 
     // const headers = new Headers({
@@ -64,10 +64,10 @@ export class TwitterserviceService {
     //   'Authorization': `Bearer ${auth_token}`
     // })
 
-    var reqHeader = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + auth_token
-    });
+    // var reqHeader = new HttpHeaders({
+    //   'Content-Type': 'application/json',
+    //   'Authorization': 'Bearer ' + auth_token
+    // });
     // return this.http.get<any[]>('/auth/1.1/statuses/user_timeline.json?screen_name=hole_ravindra&count=2',
 
     // return this.http.get<any[]>('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2',
@@ -77,12 +77,12 @@ export class TwitterserviceService {
     //     catchError(this.handleError)
     //   );
 
-    return this.http.get<any[]>('/api/1.1/statuses/user_timeline.json?screen_name=VrushabhSarode',
-      { headers: reqHeader })
-      .pipe(
-        map(data => data),
-        catchError(this.handleError)
-      );
+    // return this.http.get<any[]>('/api/1.1/statuses/user_timeline.json?screen_name=VrushabhSarode',
+    //   { headers: reqHeader })
+    //   .pipe(
+    //     map(data => data),
+    //     catchError(this.handleError)
+    //   );
 
 
 

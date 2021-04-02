@@ -15,6 +15,7 @@ export class TwitterSearchComponent {
   userName: any = 'Platform9Sys';
   showSpinner: Boolean = false;
   apiError: Boolean = false;
+  inlineError: Boolean = false;
 
   @ViewChild("inputElement") inputElement: any;
 
@@ -32,6 +33,7 @@ export class TwitterSearchComponent {
   }
 
   searchTweets() {
+    this.inlineError = false;
     if (this.userName) {
       this.apiError = false;
       this.showSpinner = true
@@ -41,11 +43,13 @@ export class TwitterSearchComponent {
           this.userTweets = resp;
           this.showSpinner = false
         },
-        (error) => {
+        (error: any) => {
           console.log('error', error);
           this.showSpinner = false
           this.apiError = true;
         })
+    } else {
+      this.inlineError = true;
     }
   }
 

@@ -8,13 +8,7 @@ import { TwitterserviceService } from './twitterservice.service';
 })
 export class AppComponent {
   title = 'twitter-assignment';
-  userTweets: any[] =[];
-  constructor(private api: TwitterserviceService) {
-
+  userTweets: any[] = [];
+  constructor() {
   }
-
-  ngOnInit() {
-  }
-
-  
 }
